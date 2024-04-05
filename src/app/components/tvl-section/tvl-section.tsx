@@ -27,10 +27,18 @@ const TVL = [
 
 const TVLSection = () => {
   return (
-    <div id="tvl" className="mb-tvl-section text-center relative">
+    <div
+      id="tvl"
+      className={classNames(
+        "mb-40 text-center relative",
+        "md:mb-10",
+        "lg:mb-tvl-section"
+      )}
+    >
       <div
         className={classNames(
-          "px-ct absolute left-[50%] top-[30%] translate-x-[-50%]  w-full",
+          "px-ct absolute left-[50%] top-[10%] translate-x-[-50%]  w-full",
+          "sm:top-[30%]",
           "lg:translate-y-[-50%]"
         )}
       >
@@ -61,6 +69,7 @@ const TVLSection = () => {
           >
             {TVL.map((item, index) => (
               <div
+                key={`tvl-${index}`}
                 data-aos={DATA_AOS.FADE_UP}
                 data-aos-delay={100 * index}
                 className={classNames("p-3 w-1/2", "sm:p-5 sm:w-1/3")}

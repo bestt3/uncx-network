@@ -1,6 +1,7 @@
 import Hero from "./components/hero/hero";
 import HomeBanner from "./components/home-banner/home-banner";
 import { NetworkSection } from "./components/network-section/network-section";
+import PartnerSection from "./components/partner-section/partner-section";
 import ServiceSection from "./components/service-section/service-section";
 import TVLSection from "./components/tvl-section/tvl-section";
 
@@ -23,6 +24,8 @@ export default function Home() {
       <ServiceSection />
 
       <TVLSection />
+
+      <PartnerSection />
     </>
   );
 }
