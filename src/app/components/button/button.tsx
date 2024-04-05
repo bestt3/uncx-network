@@ -26,17 +26,10 @@ const Button = ({
 }: ButtonProps) => {
   const _className = classNames(
     styles["base"],
-    `flex items-center justify-center`,
-    `bg-[length:300%_auto] bg-[100%_0]`,
-    `rounded-full`,
-    `text-bg1`,
-    `font-bold`,
-    `text-shadow shadow-black/10`,
-    `transition-all duration-600 `,
-    `hover:text-txt1 hover:bg-[0_0]`,
-    className,
     styles[`${size}`],
-    styles[`${variant}`]
+    styles[`${variant}`],
+    "inline-flex",
+    className
   );
 
   if (component === "a") {

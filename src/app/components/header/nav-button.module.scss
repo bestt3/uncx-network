@@ -1,2 +1,52 @@
 .base {
+  --d: calc(48.51852px + 0.46296vw);
+  background-position: 0 0 !important;
+  height: var(--d);
+  width: var(--d);
+
+  svg {
+    left: 50%;
+    min-width: 200%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .l-1,
+  .l-3 {
+    --total-length: 125;
+  }
+
+  .l-2 {
+    --total-length: 70;
+  }
+
+  path {
+    fill: none;
+    stroke: #fff;
+    stroke: var(--txt-1);
+    stroke-width: 2px;
+    --length: 24;
+    --offset: -38;
+    stroke-dasharray: 24 var(--total-length);
+    stroke-dasharray: var(--length) var(--total-length);
+    stroke-dashoffset: -38;
+    stroke-dashoffset: var(--offset);
+    transition: stroke-dashoffset 0.6s, stroke-dasharray 0.6s;
+    transition: stroke-dashoffset var(--transi), stroke-dasharray var(--transi);
+  }
+
+  &.active {
+    background-position: 100% 0 !important;
+    .l-1,
+    .l-3 {
+      --length: 22;
+      --offset: -92.5;
+    }
+    .l-2 {
+      --length: 0;
+      --offset: -50;
+    }
+  }
 }

@@ -51,6 +51,7 @@ body {
   @apply text-base;
   @apply bg-bg1;
   @apply font-normal;
+  @apply overflow-x-hidden;
 }
 
 @layer utilities {

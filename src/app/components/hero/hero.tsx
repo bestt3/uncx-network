@@ -4,6 +4,7 @@ import Button from "../button/button";
 import styles from "./hero.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
+import { DATA_AOS } from "@/app/util/aos";
 
 interface ButtonProps {
   to: string;
@@ -41,9 +42,18 @@ const Hero = ({
               "lg:w-1/2 lg:text-left lg:pr-[5vw]"
             )}
           >
-            <h1 className="text-xl font-bold font-kufam">{title}</h1>
+            <h1
+              data-aos={DATA_AOS.FADE_UP}
+              className="text-xl font-bold font-kufam"
+            >
+              {title}
+            </h1>
 
-            <p className="m-0 mt-ct-1.5-divide text-intro leading-[1.3]">
+            <p
+              data-aos={DATA_AOS.FADE_UP}
+              data-aos-delay={100}
+              className="m-0 mt-ct-1.5-divide text-intro leading-[1.3]"
+            >
               {description}
             </p>
 
@@ -52,6 +62,8 @@ const Hero = ({
                 "mt-ct-1.5-divide flex gap-4 justify-center w-full",
                 "lg:justify-start"
               )}
+              data-aos={DATA_AOS.FADE_UP}
+              data-aos-delay={200}
             >
               <Button component={`a`} size="lg" href={mainButton.to}>
                 {mainButton.label}
@@ -71,11 +83,15 @@ const Hero = ({
             </div>
           </div>
 
-          <div className={classNames("w-full mb-20", "lg:w-1/2 lg:mb-0")}>
+          <div
+            data-aos={DATA_AOS.FADE_UP}
+            className={classNames("w-full mb-20", "lg:w-1/2 lg:mb-0")}
+          >
             {banner}
           </div>
         </div>
       </Container>
+
       <div className={classNames(styles["bg"])}>
         <div className="absolute left-0 top-0 w-full h-full z-[1]">
           <Image
@@ -84,9 +100,10 @@ const Hero = ({
             width={0}
             height={0}
             sizes={`100vw`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-left"
           />
         </div>
+
         <div className="absolute w-[90%] h-full top-0 right-0">
           <Image
             src={`/bg/bg-1.jpg`}
@@ -97,6 +114,7 @@ const Hero = ({
             className="w-full h-full object-cover"
           />
         </div>
+
         <div className="after absolute w-full h-full bg-gradient-to-r from-bg1 to-bg1/0"></div>
       </div>
     </div>

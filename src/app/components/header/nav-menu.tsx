@@ -26,15 +26,15 @@ const MENU = [
 ];
 
 const NavMenu = () => {
-  const [open, setOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
     <div>
       <nav
         className={classNames(
-          "fixed right-0 top-0 h-screen bg-bg1/80",
+          "fixed right-0 top-0 h-screen bg-bg1/80 transition-all duration-600",
           "lg:relative lg:translate-x-0 lg:h-auto lg:bg-transparent",
-          { ["translate-x-[100%]"]: !open }
+          { ["translate-x-[100%]"]: !isMenuOpen }
         )}
       >
         <ul
@@ -74,7 +74,11 @@ const NavMenu = () => {
         </ul>
       </nav>
 
-      {/* <NavButton /> */}
+      <NavButton
+        className={`block lg:hidden`}
+        active={isMenuOpen}
+        onClick={() => setMenuOpen((prev) => !prev)}
+      />
     </div>
   );
 };
