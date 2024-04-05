@@ -1,6 +1,7 @@
 import Hero from "./components/hero/hero";
 import HomeBanner from "./components/home-banner/home-banner";
 import { NetworkSection } from "./components/network-section/network-section";
+import ServiceSection from "./components/service-section/service-section";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       />
 
       <NetworkSection />
+
+      <ServiceSection />
     </>
   );
 }

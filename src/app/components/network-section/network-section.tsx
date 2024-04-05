@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../container/container";
 import Image from "next/image";
 import classNames from "classnames";
+import { DATA_AOS } from "@/app/util/aos";
 
 const IMAGES = [
   "/blockchain/unicrypt_ethereum.svg",
@@ -22,8 +23,12 @@ export const NetworkSection = () => {
           `md:grid-cols-3`
         )}
       >
-        {IMAGES.map((image) => (
-          <div className="p-4">
+        {IMAGES.map((image, index) => (
+          <div
+            key={`blockchain-network-${index}`}
+            className="p-4"
+            data-aos={DATA_AOS.FADE_UP}
+          >
             <picture className={`text-center`}>
               <Image
                 src={image}
