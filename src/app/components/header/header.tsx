@@ -26,7 +26,7 @@ const Header = () => {
           height={0}
         />
       </Link>
-      {/* <NavMenu /> */}
+      <NavMenu />
     </header>
   );
 };

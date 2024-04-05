@@ -74,7 +74,7 @@ const NavMenu = () => {
         </ul>
       </nav>
 
-      <NavButton />
+      {/* <NavButton /> */}
     </div>
   );
 };
