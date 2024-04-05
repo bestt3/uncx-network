@@ -1,0 +1,14 @@
+.base {
+  picture {
+    &::before {
+      --marge: 3px;
+      background: linear-gradient(to bottom, var(--color-2), var(--color-1));
+      border-radius: 50%;
+      content: "";
+      left: calc(var(--marge) * -1);
+      position: absolute;
+      top: calc(var(--marge) * -1);
+      aspect-ratio: 1;
+    }
+  }
+}

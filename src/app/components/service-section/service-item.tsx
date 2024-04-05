@@ -19,7 +19,7 @@ const ServiceItem = ({
 }: ServiceItemProps) => {
   return (
     <div className={classNames(styles["base"], "pt-0 px-5 pb-6")}>
-      <picture className="w-[90%] mx-auto z-[1]">
+      <picture className="w-[35%] sm:w-[90%] mx-auto z-[1]">
         <Image
           src={image}
           alt=""

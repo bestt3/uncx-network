@@ -1,3 +1,4 @@
+import FounderSection from "./components/founder-section/founder-section";
 import Hero from "./components/hero/hero";
 import HomeBanner from "./components/home-banner/home-banner";
 import { NetworkSection } from "./components/network-section/network-section";
@@ -26,6 +27,8 @@ export default function Home() {
       <TVLSection />
 
       <PartnerSection />
+
+      <FounderSection />
     </>
   );
 }

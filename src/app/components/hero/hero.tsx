@@ -60,7 +60,9 @@ const Hero = ({
             <div
               className={classNames(
                 "mt-ct-1.5-divide flex gap-4 justify-center w-full",
-                "lg:justify-start"
+                "flex-row",
+                "lg:flex-col lg:items-start",
+                "xl:flex-row lg:justify-start"
               )}
               data-aos={DATA_AOS.FADE_UP}
               data-aos-delay={200}

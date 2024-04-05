@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      width: {
+        member: "calc(165.18519px + 4.62963vw)",
+      },
       colors: {
         bg1: { DEFAULT: "rgba(5, 0, 12)", 95: "rgba(5, 0, 12, 0.95)" },
         bg2: "rgb(44, 32, 61)",
@@ -30,6 +33,7 @@ const config: Config = {
         intro: `calc(18.51852px + .46296vw)`,
         "tvl-title": "calc(23.33333px + 8.33333vw)",
         "tvl-sm": "calc(16.51852px + .46296vw)",
+        "member-position": "calc(12.7037px + .09259vw)",
         xl: "calc(18.14815px + 3.7037vw)",
       },
       fontFamily: {
@@ -77,6 +81,7 @@ const config: Config = {
       },
       height: {
         "network-image": "calc(39.07407px + 1.85185vw)",
+        member: "calc(165.18519px + 4.62963vw)",
       },
     },
   },

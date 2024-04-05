@@ -33,7 +33,9 @@
     width: calc(100% - var(--border-block) * 2);
   }
 
-  .btn {
-    padding: 20px !important;
+  @media (min-width: 768px) {
+    .btn {
+      padding: 20px !important;
+    }
   }
 }
