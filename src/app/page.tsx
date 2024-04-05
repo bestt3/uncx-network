@@ -1,5 +1,6 @@
 import Hero from "./components/hero/hero";
 import HomeBanner from "./components/home-banner/home-banner";
+import { NetworkSection } from "./components/network-section/network-section";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         }}
         banner={<HomeBanner />}
       />
+
+      <NetworkSection />
     </>
   );
 }

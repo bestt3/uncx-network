@@ -68,6 +68,9 @@ const config: Config = {
           to: { transform: "translateY(2%)" },
         },
       },
+      height: {
+        "network-image": "calc(39.07407px + 1.85185vw)",
+      },
     },
   },
   plugins: [
