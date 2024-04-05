@@ -1,0 +1,7 @@
+.base {
+  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  -webkit-background-clip: text;
+  font-weight: 700;
+  line-height: 1.1;
+  -webkit-text-fill-color: transparent;
+}
