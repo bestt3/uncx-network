@@ -1,9 +1,93 @@
 .base {
-  background-image: linear-gradient(
+  --padding: calc(14.40741px + 0.18519vw);
+  --diff: 1.5;
+  --fs: calc(15.7037px + 0.09259vw);
+
+  &.lg {
+    --padding: calc(15.62963px + 0.74074vw);
+    --diff: 1.6;
+    --fs: calc(16.81481px + 0.37037vw);
+  }
+
+  @media (max-width: 500px) {
+    --padding: calc(12.81481px + 0.37037vw) !important;
+    --diff: 1.2 !important;
+    --fs: calc(14.40741px + 0.18519vw) !important;
+  }
+
+  --border: 0px;
+  background: linear-gradient(
     to right,
     var(--color-4),
     var(--color-3),
     var(--color-2),
     var(--color-1)
   );
+  background-size: 300% auto;
+  border-radius: 100px;
+  color: #05000c;
+  color: var(--bg-1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-position 0.6s, color 0.6s, transform 0.15s;
+  transition: background-position var(--transi), color var(--transi),
+    transform 0.15s;
+
+  align-items: center;
+  background-position: 100% 0;
+  display: inline-flex;
+  font-size: calc(15.7037px + 0.09259vw);
+  font-size: var(--fs);
+  font-weight: 700;
+  justify-content: center;
+  padding: var(--padding) calc(var(--padding) * var(--diff))
+    calc(var(--padding) - 1px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: relative;
+
+  &:hover {
+    background-position: 0 0 !important;
+    color: var(--txt-1);
+  }
+
+  &.outlined {
+    color: var(--txt-1);
+    --border: 3px;
+    background: transparent !important;
+    &::before {
+      background: linear-gradient(
+          to left,
+          var(--color-1),
+          var(--color-2),
+          var(--color-3),
+          var(--color-4)
+        )
+        border-box;
+      background-position: 100%;
+      background-size: 250% auto;
+      border: var(--border) solid transparent;
+      border-radius: inherit;
+      content: "";
+      height: 100%;
+      left: 0;
+      -webkit-mask: linear-gradient(90deg, #fff, #fff) padding-box,
+        linear-gradient(90deg, #fff, #fff);
+      mask: linear-gradient(90deg, #fff, #fff) padding-box,
+        linear-gradient(90deg, #fff, #fff);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      position: absolute;
+      top: 0;
+      transition: background-position 0.6s;
+      transition: background-position var(--transi);
+      width: 100%;
+    }
+
+    &:hover {
+      &::before {
+        background-position: 0 0 !important;
+      }
+    }
+  }
 }

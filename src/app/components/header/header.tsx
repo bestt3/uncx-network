@@ -11,7 +11,10 @@ const Header = () => {
         "bg-gradient-to-b from-bg1 to-bg1-95",
         "flex items-center justify-between",
         "p-header",
-        "rounded-b-lg"
+        "rounded-b-3xl",
+        "fixed top-0",
+        "w-full",
+        "z-[99]"
       )}
     >
       <Link href={"/"}>
@@ -23,7 +26,7 @@ const Header = () => {
           height={0}
         />
       </Link>
-      <NavMenu />
+      {/* <NavMenu /> */}
     </header>
   );
 };

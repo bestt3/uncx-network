@@ -30,6 +30,11 @@
   --reveal: 100px;
 }
 
+@media (max-width: 800px) {
+  :root {
+    --header-padding: calc(18.51852px + 0.46296vw);
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -45,6 +50,7 @@ body {
   @apply text-txt1;
   @apply text-base;
   @apply bg-bg1;
+  @apply font-normal;
 }
 
 @layer utilities {

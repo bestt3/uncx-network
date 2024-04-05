@@ -1,4 +1,11 @@
 import localFont from "next/font/local";
+import { Kufam } from "next/font/google";
+
+export const kufam = Kufam({
+  variable: "--font-kufam",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const gilroy = localFont({
   variable: "--font-gilroy",
