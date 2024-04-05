@@ -37,6 +37,7 @@ const Button = ({
         `rounded-full`,
         `text-bg1`,
         `font-bold`,
+        `text-shadow shadow-black/10`,
         `transition-all duration-600 `,
         `hover:text-txt1 hover:bg-[0_0]`,
         sizeStyle,
