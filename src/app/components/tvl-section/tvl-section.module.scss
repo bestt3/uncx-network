@@ -1,0 +1,18 @@
+.tvl-txt {
+  background: linear-gradient(
+    rgba(var(--color-2-rgb), 0.7),
+    rgba(var(--color-4-rgb), 0.7)
+  );
+  -webkit-background-clip: text;
+  font-size: calc(30.74074px + 18.51852vw);
+  left: 50%;
+  letter-spacing: calc(1.51852px + 0.46296vw);
+  opacity: 0.6;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: calc(3.11111px + 0.27778vw) transparent;
+  color: #05000c;
+  color: var(--bg-1);
+}

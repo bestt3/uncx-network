@@ -28,6 +28,8 @@ const config: Config = {
         "section-description": "calc(14.51852px + .46296vw)",
         serv: "calc(17.92593px + .64815vw)",
         intro: `calc(18.51852px + .46296vw)`,
+        "tvl-title": "calc(23.33333px + 8.33333vw)",
+        "tvl-sm": "calc(16.51852px + .46296vw)",
         xl: "calc(18.14815px + 3.7037vw)",
       },
       fontFamily: {
@@ -52,7 +54,9 @@ const config: Config = {
         ct: `calc(var(--ct-padding))`,
         "ct-1.5-divide": `calc(var(--ct-padding)/1.5)`,
         "ct-1.5": `calc(var(--ct-padding)*1.5)`,
+        "ct-2": `calc(var(--ct-padding)*2)`,
         banner: "calc(-46.2963px - 7.40741vw)",
+        "tvl-section": "calc(-75.92593px - 23.14815vw)",
       },
       transitionDuration: {
         600: `600ms`,
