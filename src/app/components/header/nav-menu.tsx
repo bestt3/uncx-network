@@ -66,11 +66,18 @@ const NavMenu = () => {
           ))}
           <li
             className={classNames(
-              "p-m-nav-item min-w-[280px]",
+              "p-m-nav-item min-w-[280px] flex gap-2",
               "lg:p-0 lg:min-w-[auto]"
             )}
           >
             <Button className="w-full lg:w-auto">Go to App</Button>
+            <Button
+              component={`a`}
+              href="/presale"
+              className="w-full lg:w-auto"
+            >
+              Dobify Presale Live Now
+            </Button>
           </li>
         </ul>
       </nav>
