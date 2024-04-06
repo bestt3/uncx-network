@@ -18,8 +18,8 @@ const ServiceItem = ({
   documentationLink,
 }: ServiceItemProps) => {
   return (
-    <div className={classNames(styles["base"], "pt-0 px-5 pb-6")}>
-      <picture className="w-[35%] sm:w-[90%] mx-auto z-[1]">
+    <div className={classNames(styles["base"], "sm:pt-0 px-5 py-6")}>
+      <picture className="order-2 m-1 sm:m-auto sm:order-1 w-[35%] sm:w-[90%] mx-auto z-[1]">
         <Image
           src={image}
           alt=""
@@ -30,11 +30,11 @@ const ServiceItem = ({
         />
       </picture>
 
-      <h3 className="mb-5 text-serv font-bold whitespace-break-spaces z-[1]">
+      <h3 className="order-1 sm:order-2 sm:mb-5 text-serv font-bold sm:whitespace-break-spaces z-[1]">
         {title}
       </h3>
 
-      <div className="flex flex-col gap-3">
+      <div className="order-3 flex flex-col gap-3">
         <Button
           component={`a`}
           className={classNames(styles["btn"], "w-full")}

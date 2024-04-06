@@ -7,20 +7,7 @@ import classNames from "classnames";
 import { DATA_AOS } from "@/app/util/aos";
 import Button from "../button/button";
 import Member from "../member/member";
-
-const FOUNDERS = [
-  {
-    image: "/team/James.png",
-    name: "James",
-    position: "CO-FOUNDER",
-  },
-  {
-    image: "/team/Chav2.jpg",
-    name: "Antoine 'Chav' Chaveron",
-    position: "CO-FOUNDER",
-    linkedin: "https://www.linkedin.com/in/antoine-chaveron-76054212a/",
-  },
-];
+import { FOUNDERS } from "@/app/util/team";
 
 const FounderSection = () => {
   return (

@@ -3,6 +3,7 @@ import Hero from "../components/hero/hero";
 import ServiceSection from "../components/service-section/service-section";
 import SubscribeSection from "../components/subscribe-section/subscribe-section";
 import TeamBanner from "../components/team-banner/team-banner";
+import TeamSection from "../components/team-section/team-section";
 
 const TeamPage = () => {
   return (
@@ -15,6 +16,7 @@ const TeamPage = () => {
         leftClassName="lg:pr-0"
         banner={<TeamBanner />}
       />
+      <TeamSection />
       <ServiceSection hideDescription />
       <SubscribeSection />
     </>
