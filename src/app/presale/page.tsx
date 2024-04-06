@@ -18,7 +18,11 @@ const PreSalePage = () => {
         description={`Decentralized, scalable, trusted. Welcome to UNCX.`}
         mainButton={{ to: "https://app.uncx.network/", label: "Go to App" }}
         leftContainerPadding
-        banner={<HomeBanner />}
+        banner={
+          <>
+            <h1 className="text-right">Insert presale widget here</h1>
+          </>
+        }
       />
 
       <NetworkSection />
