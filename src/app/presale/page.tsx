@@ -16,7 +16,6 @@ const PreSalePage = () => {
       <Hero
         title={`Secure DeFi Infrastructure`}
         description={`Decentralized, scalable, trusted. Welcome to UNCX.`}
-        mainButton={{ to: "https://app.uncx.network/", label: "Go to App" }}
         leftContainerPadding
         banner={
           <>

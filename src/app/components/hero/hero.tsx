@@ -15,7 +15,7 @@ interface ButtonProps {
 interface HeroProps {
   title: string;
   description: string;
-  mainButton: ButtonProps;
+  mainButton?: ButtonProps;
   secondaryButton?: ButtonProps;
   banner?: ReactNode;
   gradientTitle?: boolean;
@@ -71,31 +71,35 @@ const Hero = ({
               {description}
             </p>
 
-            <div
-              className={classNames(
-                "mt-ct-1.5-divide flex gap-4 justify-center items-start w-full",
-                "lg:flex-col lg:justify-start",
-                "xl:flex-row"
-              )}
-              data-aos={DATA_AOS.FADE_UP}
-              data-aos-delay={200}
-            >
-              <Button component={`a`} size="lg" href={mainButton.to}>
-                {mainButton.label}
-              </Button>
+            {(mainButton || secondaryButton) && (
+              <div
+                className={classNames(
+                  "mt-ct-1.5-divide flex gap-4 justify-center items-start w-full",
+                  "lg:flex-col lg:justify-start",
+                  "xl:flex-row"
+                )}
+                data-aos={DATA_AOS.FADE_UP}
+                data-aos-delay={200}
+              >
+                {mainButton && (
+                  <Button component={`a`} size="lg" href={mainButton.to}>
+                    {mainButton.label}
+                  </Button>
+                )}
 
-              {secondaryButton && (
-                <Button
-                  variant="outlined"
-                  component={`a`}
-                  size="lg"
-                  href={secondaryButton.to}
-                  target="_blank"
-                >
-                  {secondaryButton.label}
-                </Button>
-              )}
-            </div>
+                {secondaryButton && (
+                  <Button
+                    variant="outlined"
+                    component={`a`}
+                    size="lg"
+                    href={secondaryButton.to}
+                    target="_blank"
+                  >
+                    {secondaryButton.label}
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
 
           <div
