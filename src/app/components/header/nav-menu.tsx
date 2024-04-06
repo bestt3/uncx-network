@@ -55,8 +55,9 @@ const NavMenu = () => {
               <Link
                 href={navItem.to}
                 className={classNames(
-                  "text-shadow-sm shadow-white text-m-nav-item ",
-                  "lg:text-md-1"
+                  "text-shadow-sm shadow-white text-m-nav-item transition-all duration-600",
+                  "lg:text-md-1",
+                  "hover:text-color1"
                 )}
               >
                 {navItem.label}

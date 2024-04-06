@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import { gilroy, kufam } from "@/styles/font";
 import classNames from "classnames";
 import AosTransitionWrapper from "./components/aos-transition-wrapper/aos-transition-wrapper";
+import Footer from "./components/footer/footer";
 
 export const metadata: Metadata = {
   title: "UNCX Network • Multi-chain DeFi Services",
@@ -45,6 +46,7 @@ export default function RootLayout({
         <main className={classNames("pt-16", "lg:pt-header-height")}>
           <AosTransitionWrapper>{children}</AosTransitionWrapper>
         </main>
+        <Footer />
       </body>
     </html>
   );

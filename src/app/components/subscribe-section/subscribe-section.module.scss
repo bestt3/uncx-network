@@ -1,0 +1,52 @@
+.form-control {
+  --rad: 100px;
+  --bd: 3px;
+  --pad: 5px;
+  --h: calc(57.03704px + var(--bd) * 2 + 0.92593vw);
+  align-items: stretch;
+  display: flex;
+  height: calc(63.03704px + 0.92593vw);
+  height: var(--h);
+  width: 100%;
+  position: relative;
+
+  &::after {
+    background: linear-gradient(
+        to left,
+        var(--color-1),
+        var(--color-2),
+        var(--color-3),
+        var(--color-4)
+      )
+      border-box;
+    background-position: 100%;
+    background-size: 250% auto;
+    border: var(--bd) solid transparent;
+    border-radius: var(--rad);
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    -webkit-mask: linear-gradient(90deg, #fff, #fff) padding-box,
+      linear-gradient(90deg, #fff, #fff);
+    mask: linear-gradient(90deg, #fff, #fff) padding-box,
+      linear-gradient(90deg, #fff, #fff);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: background-position var(--transi);
+    width: 100%;
+  }
+  input {
+    background: transparent;
+    color: #fff;
+    color: var(--txt-1);
+    flex: 1;
+    font-size: calc(15.11111px + 0.27778vw);
+    height: 100%;
+    padding: 0 calc(var(--h) / 2.5);
+    width: 100%;
+  }
+}

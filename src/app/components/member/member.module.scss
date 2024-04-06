@@ -9,6 +9,11 @@
       position: absolute;
       top: calc(var(--marge) * -1);
       aspect-ratio: 1;
+      height: calc(100% + var(--marge)* 2);
+      left: calc(var(--marge)* -1);
+      position: absolute;
+      top: calc(var(--marge)* -1);
+      width: calc(100% + var(--marge)* 2);
     }
   }
 }
