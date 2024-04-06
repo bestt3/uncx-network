@@ -14,11 +14,7 @@ export default function Home() {
       <Hero
         title={`Secure DeFi Infrastructure`}
         description={`Decentralized, scalable, trusted. Welcome to UNCX.`}
-        mainButton={{ to: "https://app.uncx.network/", label: "Go to App" }}
-        secondaryButton={{
-          to: "https://docs.uncx.network/",
-          label: "Documentation",
-        }}
+        mainButton={{ to: "/presale", label: "Dobify Presale Live Now" }}
         leftContainerPadding
         banner={<HomeBanner />}
       />

@@ -20,8 +20,9 @@ const MENU = [
     label: "Network",
   },
   {
-    to: "/blog",
-    label: "Blog",
+    to: "https://docs.uncx.network/",
+    label: "Documentation",
+    target: "_blank",
   },
 ];
 
@@ -59,6 +60,7 @@ const NavMenu = () => {
                   "lg:text-md-1",
                   "hover:text-color1"
                 )}
+                target={navItem.target}
               >
                 {navItem.label}
               </Link>
@@ -66,18 +68,11 @@ const NavMenu = () => {
           ))}
           <li
             className={classNames(
-              "p-m-nav-item min-w-[280px] flex gap-2",
+              "p-m-nav-item min-w-[280px]",
               "lg:p-0 lg:min-w-[auto]"
             )}
           >
             <Button className="w-full lg:w-auto">Go to App</Button>
-            <Button
-              component={`a`}
-              href="/presale"
-              className="w-full lg:w-auto"
-            >
-              Dobify Presale Live Now
-            </Button>
           </li>
         </ul>
       </nav>
