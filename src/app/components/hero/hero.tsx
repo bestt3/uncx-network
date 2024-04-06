@@ -5,6 +5,7 @@ import styles from "./hero.module.scss";
 import Image from "next/image";
 import classNames from "classnames";
 import { DATA_AOS } from "@/app/util/aos";
+import GradientText from "../gradient-text/gradient-text";
 
 interface ButtonProps {
   to: string;
@@ -17,6 +18,8 @@ interface HeroProps {
   mainButton: ButtonProps;
   secondaryButton?: ButtonProps;
   banner?: ReactNode;
+  gradientTitle?: boolean;
+  leftClassName?: string;
 }
 
 const Hero = ({
@@ -25,6 +28,8 @@ const Hero = ({
   mainButton,
   secondaryButton,
   banner,
+  leftClassName,
+  gradientTitle,
 }: HeroProps) => {
   return (
     <div className={classNames(styles["base"])}>
@@ -39,15 +44,24 @@ const Hero = ({
           <div
             className={classNames(
               "w-full flex flex-col items-start  text-center",
-              "lg:w-1/2 lg:text-left lg:pr-[5vw]"
+              "lg:w-1/2 lg:text-left lg:pr-[5vw]",
+              leftClassName
             )}
           >
-            <h1
-              data-aos={DATA_AOS.FADE_UP}
-              className="text-xl font-bold font-kufam"
-            >
-              {title}
-            </h1>
+            {gradientTitle ? (
+              <GradientText
+                data-aos={DATA_AOS.FADE_UP}
+                className="text-xl font-bold font-kufam"
+                text={title}
+              />
+            ) : (
+              <h1
+                data-aos={DATA_AOS.FADE_UP}
+                className="text-xl font-bold font-kufam"
+              >
+                {title}
+              </h1>
+            )}
 
             <p
               data-aos={DATA_AOS.FADE_UP}

@@ -41,7 +41,11 @@ const SERVICE_LIST = [
   },
 ];
 
-const ServiceSection = () => {
+interface ServiceSectionProps {
+  hideDescription?: boolean;
+}
+
+const ServiceSection = ({ hideDescription }: ServiceSectionProps) => {
   return (
     <Container>
       <div className="px-ct">
@@ -53,18 +57,20 @@ const ServiceSection = () => {
             data-aos={DATA_AOS.FADE_UP}
           />
 
-          <p
-            data-aos={DATA_AOS.FADE_UP}
-            data-aos-delay={100}
-            className="text-section-description leading-[1.6] lg:max-w-[70%] mx-auto"
-          >
-            UNCX Network (formerly UniCrypt) is a leading provider of
-            decentralized finance services. We are consistent market innovators
-            of automated and scalable token solutions. Thousands of investors
-            and projects rely on our certified & secured technology to
-            participate in DeFi safely. Many imitate, but few innovate like we
-            did.
-          </p>
+          {!hideDescription && (
+            <p
+              data-aos={DATA_AOS.FADE_UP}
+              data-aos-delay={100}
+              className="text-section-description leading-[1.6] lg:max-w-[70%] mx-auto"
+            >
+              UNCX Network (formerly UniCrypt) is a leading provider of
+              decentralized finance services. We are consistent market
+              innovators of automated and scalable token solutions. Thousands of
+              investors and projects rely on our certified & secured technology
+              to participate in DeFi safely. Many imitate, but few innovate like
+              we did.
+            </p>
+          )}
         </div>
 
         <div className={classNames("mt-ct justify-center flex flex-wrap")}>

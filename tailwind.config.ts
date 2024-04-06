@@ -69,6 +69,7 @@ const config: Config = {
         "ct-2.5-divide": `calc(var(--ct-padding)/2.5)`,
         "ct-4": `calc(var(--ct-padding)*4)`,
         banner: "calc(-46.2963px - 7.40741vw)",
+        "team-banner": "calc(-35.18519px - 4.62963vw)",
         "tvl-section": "calc(-75.92593px - 23.14815vw)",
       },
       transitionDuration: {
