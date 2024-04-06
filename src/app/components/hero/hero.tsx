@@ -19,7 +19,7 @@ interface HeroProps {
   secondaryButton?: ButtonProps;
   banner?: ReactNode;
   gradientTitle?: boolean;
-  leftClassName?: string;
+  leftContainerPadding?: boolean;
 }
 
 const Hero = ({
@@ -28,7 +28,7 @@ const Hero = ({
   mainButton,
   secondaryButton,
   banner,
-  leftClassName,
+  leftContainerPadding,
   gradientTitle,
 }: HeroProps) => {
   return (
@@ -44,8 +44,8 @@ const Hero = ({
           <div
             className={classNames(
               "w-full flex flex-col items-start  text-center",
-              "lg:w-1/2 lg:text-left lg:pr-[5vw]",
-              leftClassName
+              "lg:w-1/2 lg:text-left ",
+              { "lg:pr-[5vw]": leftContainerPadding }
             )}
           >
             {gradientTitle ? (
@@ -73,10 +73,9 @@ const Hero = ({
 
             <div
               className={classNames(
-                "mt-ct-1.5-divide flex gap-4 justify-center w-full",
-                "flex-row",
-                "lg:flex-col lg:items-start",
-                "xl:flex-row lg:justify-start"
+                "mt-ct-1.5-divide flex gap-4 justify-center items-start w-full",
+                "lg:flex-col lg:justify-start",
+                "xl:flex-row"
               )}
               data-aos={DATA_AOS.FADE_UP}
               data-aos-delay={200}

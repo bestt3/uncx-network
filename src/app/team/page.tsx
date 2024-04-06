@@ -13,7 +13,6 @@ const TeamPage = () => {
         gradientTitle
         description={`A global team of passionate DeFi and decentralization evangelists`}
         mainButton={{ to: "https://t.me/uncx_token/", label: "Get in Touch" }}
-        leftClassName="lg:pr-0"
         banner={<TeamBanner />}
       />
       <TeamSection />

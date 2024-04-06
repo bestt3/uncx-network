@@ -5,45 +5,7 @@ import { DATA_AOS } from "@/app/util/aos";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-
-const LIST = [
-  {
-    image: "/partners/Solidproof.png",
-    to: "https://solidproof.io/",
-  },
-  {
-    image: "/partners/Softstack.png",
-    to: "https://softstack.io/",
-  },
-  {
-    image: "/partners/Hacken.png",
-    to: "https://hacken.io/",
-  },
-  {
-    image: "/partners/Dextools.png",
-    to: "https://dextools.io/",
-  },
-  {
-    image: "/partners/Gelato.png",
-    to: "https://gelato.network/",
-  },
-  {
-    image: "/partners/Lossless.png",
-    to: "https://lossless.io/",
-  },
-  {
-    image: "/partners/Assure.png",
-    to: "https://assuredefi.com/",
-  },
-  {
-    image: "/partners/HelloLabs.png",
-    to: "https://www.hello.one",
-  },
-  {
-    image: "/partners/KillerWhales.png",
-    to: "https://www.hello.one/killerwhales",
-  },
-];
+import { PARTNERS } from "@/app/util/network";
 
 const PartnerSection = () => {
   return (
@@ -68,7 +30,7 @@ const PartnerSection = () => {
         </div>
 
         <div className="mt-ct flex flex-wrap items-center">
-          {LIST.map((item, index) => (
+          {PARTNERS.map((item, index) => (
             <div
               key={`partner-${index}`}
               data-aos={DATA_AOS.FADE_UP}

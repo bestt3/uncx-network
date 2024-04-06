@@ -19,6 +19,7 @@ export default function Home() {
           to: "https://docs.uncx.network/",
           label: "Documentation",
         }}
+        leftContainerPadding
         banner={<HomeBanner />}
       />
 

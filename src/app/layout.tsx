@@ -43,7 +43,7 @@ export default function RootLayout({
         )}
       >
         <Header key={`header`} />
-        <main className={classNames("pt-16", "lg:pt-header-height")}>
+        <main className={classNames("pt-16 overflow-hidden", "lg:pt-header-height")}>
           <AosTransitionWrapper>{children}</AosTransitionWrapper>
         </main>
         <Footer />

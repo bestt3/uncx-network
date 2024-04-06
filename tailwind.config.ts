@@ -81,6 +81,7 @@ const config: Config = {
       },
       animation: {
         "lg-home": "lg-home linear infinite",
+        network_1: "network_1 linear infinite",
       },
       keyframes: {
         "lg-home": {
@@ -88,6 +89,20 @@ const config: Config = {
           "60%": { transform: "translateY(-3%)" },
           to: { transform: "translateY(2%)" },
         },
+        network_1: {
+          "0%": {
+            transform: "scale(.9)",
+          },
+          "50%": {
+            transform: "scale(1.08)",
+          },
+          "100%": {
+            transform: "scale(.9)",
+          },
+        },
+      },
+      bottom: {
+        "bottom-network-picture": `calc(var(--ct-padding)*-5)`,
       },
       height: {
         "network-image": "calc(39.07407px + 1.85185vw)",
