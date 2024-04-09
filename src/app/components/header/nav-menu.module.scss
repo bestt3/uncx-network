@@ -1,0 +1,8 @@
+.submenu-anchor {
+  &:hover {
+    & + ol {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

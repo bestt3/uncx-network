@@ -4,6 +4,8 @@ import ServiceSection from "../components/service-section/service-section";
 import SubscribeSection from "../components/subscribe-section/subscribe-section";
 import TeamBanner from "../components/team-banner/team-banner";
 import TeamSection from "../components/team-section/team-section";
+import GetInTouch from "../components/get-in-touch/get-in-touch";
+import CanvasSection from "../components/canvas-section/canvas-section";
 
 const TeamPage = () => {
   return (
@@ -16,8 +18,10 @@ const TeamPage = () => {
         banner={<TeamBanner />}
       />
       <TeamSection />
+      <GetInTouch />
       <ServiceSection hideDescription />
       <SubscribeSection />
+      <CanvasSection />
     </>
   );
 };

@@ -3,6 +3,7 @@ import Container from "../container/container";
 import GradientText from "../gradient-text/gradient-text";
 import Link from "next/link";
 import { DATA_AOS } from "@/app/util/aos";
+import Social from "../social/social";
 
 const NewsFeedSection = () => {
   return (
@@ -10,9 +11,12 @@ const NewsFeedSection = () => {
       <div className="px-ct">
         <div className="mt-ct" data-aos={DATA_AOS.FADE_UP}>
           <GradientText
-            className="text-section-title mb-ct-1.5"
+            className="text-section-title mb-ct-1.5-divide"
             text={`News Feed`}
           />
+        </div>
+        <div data-aos={DATA_AOS.FADE_UP}>
+          <Social className="justify-center" />
         </div>
         <p
           className="my-ct-1.5 text-section-description"

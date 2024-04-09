@@ -5,11 +5,34 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Button from "../button/button";
 import NavButton from "./nav-button";
+import styles from "./nav-menu.module.scss";
 
 const MENU = [
   {
     to: "/products",
     label: "Products",
+    subMenu: [
+      {
+        to: "/launchpad",
+        label: "ILO Launchpad",
+      },
+      {
+        to: "/vesting",
+        label: "LP & Token Vesting",
+      },
+      {
+        to: "/staking",
+        label: "Staking & Farming",
+      },
+      {
+        to: "/minter",
+        label: "Token Minter",
+      },
+      {
+        to: "/tokens",
+        label: "Token Ecosystem",
+      },
+    ],
   },
   {
     to: "/team",
@@ -49,21 +72,58 @@ const NavMenu = () => {
             <li
               key={`nav-item-${index}`}
               className={classNames(
-                "p-m-nav-item min-w-[280px]",
-                "lg:p-0 lg:min-w-[auto]"
+                " min-w-[280px] relative",
+                "lg:p-0 lg:min-w-[auto]",
+                {
+                  "p-m-nav-item": !navItem.subMenu,
+                }
               )}
             >
-              <Link
-                href={navItem.to}
-                className={classNames(
-                  "text-shadow-sm shadow-white text-m-nav-item transition-all duration-600",
-                  "lg:text-md-1",
-                  "hover:text-color1"
-                )}
-                target={navItem.target}
-              >
-                {navItem.label}
-              </Link>
+              {navItem.subMenu ? (
+                <>
+                  <span
+                    className={classNames(
+                      "hidden text-shadow-sm shadow-white text-m-nav-item transition-all duration-600",
+                      "lg:text-md-1 cursor-pointer lg:block",
+                      styles["submenu-anchor"]
+                    )}
+                  >
+                    {navItem.label}
+                  </span>
+                  <ol className="lg:opacity-0 lg:left-[-50%] lg:absolute lg:p-4 lg:bg-bg1 lg:rounded-lg transition-all duration-600  text-nowrap hover:lg:opacity-[1]">
+                    {navItem.subMenu.map((subItem, subIndex) => (
+                      <li
+                        key={`nav-item-${index}-${subIndex}`}
+                        className={classNames(
+                          "p-m-nav-item lg:p-2.5 lg:text-center"
+                        )}
+                      >
+                        <Link
+                          href={subItem.to}
+                          className={classNames(
+                            "text-shadow-sm text-m-nav-item lg:text-[90%] lg:font-bold shadow-white transition-all duration-600 ",
+                            "hover:text-color1"
+                          )}
+                        >
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              ) : (
+                <Link
+                  href={navItem.to}
+                  className={classNames(
+                    "text-shadow-sm shadow-white text-m-nav-item transition-all duration-600",
+                    "lg:text-md-1",
+                    "hover:text-color1"
+                  )}
+                  target={navItem.target}
+                >
+                  {navItem.label}
+                </Link>
+              )}
             </li>
           ))}
           <li

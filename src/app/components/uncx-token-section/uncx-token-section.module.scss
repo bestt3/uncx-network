@@ -1,0 +1,21 @@
+.uncx-text {
+  background: linear-gradient(var(--color-1), var(--color-2));
+  -webkit-background-clip: text;
+  font-size: calc(55.55556px + 13.88889vw);
+  left: 50%;
+  opacity: 0.5;
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  -webkit-text-stroke: calc(2.40741px + 0.18519vw) transparent;
+  color: var(--bg-1);
+}
+
+.checkbox {
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-1);
+  }
+}

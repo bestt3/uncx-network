@@ -1,0 +1,44 @@
+.base {
+  --padding: calc(18.51852px + 0.46296vw);
+  background: linear-gradient(
+    to bottom,
+    var(--color-4),
+    var(--color-3),
+    var(--color-2),
+    var(--color-1)
+  );
+  background-position: 0 100%;
+  background-size: auto 300%;
+  border-radius: var(--radius-2);
+  height: 100%;
+  padding: var(--padding);
+  text-align: center;
+  transition: background-position var(--transi);
+
+  &:hover {
+    background-position: 0 0;
+  }
+
+  &::before {
+    background-color: var(--bg-1);
+    border-radius: calc(var(--radius-2) - var(--border-block));
+    content: "";
+    height: calc(100% - var(--border-block) * 2);
+    left: var(--border-block);
+    position: absolute;
+    top: var(--border-block);
+    width: calc(100% - var(--border-block) * 2);
+  }
+
+  picture::before {
+    --marge: 3px;
+    background: linear-gradient(to bottom, var(--color-1), var(--color-2));
+    border-radius: 50%;
+    content: "";
+    height: calc(100% + var(--marge) * 2);
+    left: calc(var(--marge) * -1);
+    position: absolute;
+    top: calc(var(--marge) * -1);
+    width: calc(100% + var(--marge) * 2);
+  }
+}

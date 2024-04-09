@@ -76,7 +76,7 @@ const TVLSection = () => {
               >
                 <div className="text-intro font-bold">{item.subtitle}</div>
                 <GradientText
-                  className={classNames("font-bold text-xl my-3", "sm:my-6")}
+                  className={classNames("font-bold text-xxl my-3", "sm:my-6")}
                   text={item.value}
                 />
                 <div className="text-tvl-sm">{item.title}</div>

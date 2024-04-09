@@ -12,6 +12,7 @@ interface ButtonProps {
   href?: string;
   variant?: "filled" | "outlined";
   target?: HTMLAttributeAnchorTarget;
+  disabled?: boolean
 }
 
 const Button = ({
@@ -23,6 +24,7 @@ const Button = ({
   onClick,
   variant = "filled",
   target,
+  disabled,
 }: ButtonProps) => {
   const _className = classNames(
     styles["base"],
@@ -41,7 +43,7 @@ const Button = ({
   } else {
   }
   return (
-    <button className={_className} onClick={onClick}>
+    <button className={_className} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

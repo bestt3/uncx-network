@@ -9,11 +9,30 @@
       position: absolute;
       top: calc(var(--marge) * -1);
       aspect-ratio: 1;
-      height: calc(100% + var(--marge)* 2);
-      left: calc(var(--marge)* -1);
+      height: calc(100% + var(--marge) * 2);
+      left: calc(var(--marge) * -1);
       position: absolute;
-      top: calc(var(--marge)* -1);
-      width: calc(100% + var(--marge)* 2);
+      top: calc(var(--marge) * -1);
+      width: calc(100% + var(--marge) * 2);
+    }
+  }
+
+  .icon {
+    &.x-icon {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+      fill: var(--color-1);
+
+      path[fill] {
+        fill: var(--color-1);
+      }
     }
   }
 }

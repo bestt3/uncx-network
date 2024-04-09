@@ -51,13 +51,13 @@ const Hero = ({
             {gradientTitle ? (
               <GradientText
                 data-aos={DATA_AOS.FADE_UP}
-                className="text-xl font-bold font-kufam"
+                className="text-xxl font-bold font-kufam"
                 text={title}
               />
             ) : (
               <h1
                 data-aos={DATA_AOS.FADE_UP}
-                className="text-xl font-bold font-kufam"
+                className="text-xxl font-bold font-kufam"
               >
                 {title}
               </h1>

@@ -4,6 +4,7 @@ import GradientText from "../gradient-text/gradient-text";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
+import Social from "../social/social";
 
 const MENU = [
   {
@@ -123,6 +124,8 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
+
+              <Social className="justify-start mt-ct-1.5-divide" size={`sm`} />
             </div>
 
             {RIGHT_MENU.map((menu, index) => (

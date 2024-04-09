@@ -44,10 +44,14 @@
   -moz-user-select: none;
   user-select: none;
   position: relative;
-
-  &:hover {
-    background-position: 0 0 !important;
-    color: var(--txt-1);
+  &[disabled] {
+    opacity: 0.6;
+  }
+  &:not([disabled]) {
+    &:hover {
+      background-position: 0 0 !important;
+      color: var(--txt-1);
+    }
   }
 
   &.outlined {

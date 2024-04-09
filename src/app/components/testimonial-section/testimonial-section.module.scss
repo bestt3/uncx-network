@@ -1,0 +1,22 @@
+.item {
+  --padding: calc(22.03704px + 0.92593vw);
+  align-items: center;
+  background-color: var(--bg-1);
+  border-radius: var(--radius-2);
+  display: flex;
+  height: 100%;
+  padding: var(--padding);
+  --marge: 3px;
+
+  &::before {
+    background: linear-gradient(to left, var(--color-1), var(--color-2));
+    border-radius: inherit;
+    content: "";
+    height: calc(100% + var(--marge) * 2);
+    left: calc(var(--marge) * -1);
+    position: absolute;
+    top: calc(var(--marge) * -1);
+    width: calc(100% + var(--marge) * 2);
+    z-index: -1;
+  }
+}

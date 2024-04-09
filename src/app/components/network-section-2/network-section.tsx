@@ -14,7 +14,7 @@ import Button from "../button/button";
 
 const NetworkSection = () => {
   return (
-    <div className="px-ct relative">
+    <div className="p-ct relative">
       <Container className="mt-ct z-[10] ">
         <GradientText
           component={`h2`}

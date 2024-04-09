@@ -1,0 +1,55 @@
+.icon {
+  cursor: pointer;
+
+  svg {
+    width: 70px;
+    height: 70px;
+    fill: var(--color-1);
+    transition: all ease 0.6s;
+
+    path[fill] {
+      fill: var(--color-1);
+    }
+  }
+
+  &.sm {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    &.x {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &.x {
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    svg {
+      width: 35px !important;
+      height: 35px !important;
+    }
+
+    &.x {
+      svg {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+}

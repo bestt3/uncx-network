@@ -4,6 +4,8 @@ import SubscribeSection from "../components/subscribe-section/subscribe-section"
 import Hero from "../components/hero/hero";
 import NetworkBanner from "../components/network-banner/network-banner";
 import NetworkSection from "../components/network-section-2/network-section";
+import GetInTouch from "../components/get-in-touch/get-in-touch";
+import CanvasSection from "../components/canvas-section/canvas-section";
 
 const NetworkPage = () => {
   return (
@@ -20,8 +22,10 @@ const NetworkPage = () => {
         banner={<NetworkBanner />}
       />
       <NetworkSection />
+      <GetInTouch />
       <ServiceSection hideDescription />
       <SubscribeSection />
+      <CanvasSection />
     </>
   );
 };
